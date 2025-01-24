@@ -7,7 +7,7 @@ if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-
+#firebase useed
 # Authentication functions
 def authenticate_user(username, password):
     """Authenticate user and fetch their data from Firestore."""
