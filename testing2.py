@@ -1,0 +1,157 @@
+import sys
+import json
+import re
+import streamlit as st
+from langchain_google_genai import GoogleGenerativeAI
+
+def load_keywords():
+    file_path = "keywords.json"
+    try:
+        with open(file_path, "r") as file:
+            keywords_data = json.load(file)
+        # Convert keyword sets to lowercase
+        keywords_data = {key: set(map(str.lower, value)) for key, value in keywords_data.items()}
+        return keywords_data
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Error: File '{file_path}' not found.")
+    except json.JSONDecodeError:
+        raise ValueError(f"Error: Unable to decode JSON in '{file_path}'.")
+
+def extract_skills(text, keywords_data):
+    # Extract keyword sets
+    programming_language_keywords = keywords_data["programming_language_keywords"]
+    additional_programming_languages = keywords_data["additional_programming_languages"]
+    programming_tools_keywords = keywords_data["programming_tools_keywords"]
+    related_technologies = keywords_data["related_technologies"]
+
+    # Find keywords in the text
+    skills_keywords = set(re.findall(r'\b[A-Za-z-]+\b', text.lower()))
+
+    # Declare set to store the words
+    matched_keywords = set()
+
+    # Match keywords
+    for keyword_set in (programming_language_keywords, additional_programming_languages, programming_tools_keywords, related_technologies):
+        matched_keywords |= skills_keywords.intersection(keyword_set)
+
+    # Replace specific keywords
+    replacements = {"react": "reactjs", "node": "nodejs", "css": "cascading style sheet"}
+    matched_keywords = {replacements.get(keyword, keyword) for keyword in matched_keywords}
+
+    return list(matched_keywords)
+
+def extract_lines(dialogues):
+    resume_keywords = ["work experience", "certification", "project", "volunteer","projects","certification"]
+    extracted_lines = {}
+    for dialogue in dialogues:
+        for keyword in resume_keywords:
+            if keyword.lower() in dialogue.lower():
+                lines = [line.strip() for line in dialogue.split('\n')]
+                extracted_lines[keyword.lower()] = lines
+    return extracted_lines
+
+def generate_interview_questions_and_answers(model, keywords, total_questions=9):
+    if not keywords:
+        raise ValueError("No keywords found. Unable to generate questions.")
+
+    qa_pairs = []
+    num_questions = total_questions // len(keywords)
+
+    # Generate questions for matched keywords
+    for keyword in keywords:
+        unique_questions = set()
+        for _ in range(num_questions):
+            question_prompt = f"generate one simple {keyword} interview question asked by interviewer?"
+            question_response = model.generate(prompts=[question_prompt], max_length=50, temperature=0.3)
+
+            question = question_response.generations[0][0].text.removeprefix("**Question:**").strip()
+
+            if question not in unique_questions:
+                unique_questions.add(question)
+
+                answer_prompt = f"Provide simple response to the following question: {question} with 75 words"
+                answer_response = model.generate(prompts=[answer_prompt], max_length=50, temperature=0.3)
+                answer = answer_response.generations[0][0].text.strip()
+
+                qa_pairs.append((question, answer))
+
+    return qa_pairs
+
+def generate_interview_resume(keywords, total_questions):
+    if not keywords:
+        print("No keywords found. Unable to generate questions.")
+        return []
+
+    # GoogleGenerativeAI for Gemini
+    model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyBsIol3W7uSeFIEBRkKA3Myd48XpJUxs6Y")
+
+    qa_pairs = []
+
+    # Generate questions for each keyword
+    for keyword in keywords:
+        unique_questions = set()
+
+        # Generate a single question for each keyword
+        for _ in range(1):
+            question_prompt = f"Generate an interview question related to: {keyword}"
+            question_response = model.generate(prompts=[question_prompt], max_length=50, temperature=0.3)
+
+            question = question_response.generations[0][0].text.strip()
+
+            if question not in unique_questions:
+                unique_questions.add(question)
+
+                answer_prompt = f"Provide a answer to the following question: {question} with 75 words"
+                answer_response = model.generate(prompts=[answer_prompt], max_length=50, temperature=0.3)
+                answer = answer_response.generations[0][0].text.strip()
+
+                qa_pairs.append((question, answer))
+
+    return qa_pairs
+
+
+def main():
+    st.title("Question and Answer Generation")
+
+    if len(sys.argv) > 2:
+        text = sys.argv[1]
+        passage = sys.argv[2]
+
+        me_dialogues = re.split(r'Interviewer:', text)
+        me_only = ''.join([dialogue.split('Me:')[1].strip() for dialogue in me_dialogues if 'Me:' in dialogue])
+        keywords_data = load_keywords()
+
+        if keywords_data:
+            keywords = extract_skills(passage, keywords_data)
+            resume_keywords = extract_lines(me_dialogues)
+            resume_keywords_list = list(resume_keywords.values())
+
+            model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyBsIol3W7uSeFIEBRkKA3Myd48XpJUxs6Y")
+
+            qa_pairs = generate_interview_questions_and_answers(model, keywords)
+            render_qa_pairs(qa_pairs)
+
+            resume_qa_pairs = generate_interview_resume(resume_keywords_list, len(resume_keywords_list))
+            render_qa_pairs(resume_qa_pairs)
+        else:
+            st.error("Failed to load keywords.")
+    else:
+        st.error("No text provided.")
+
+def render_qa_pairs(qa_pairs):
+    question_color = "#1064CE"
+    answer_color = "#000000"
+    background_color = "#C7E5F9"
+    font_weight = 900
+
+    for question, answer in qa_pairs:
+        st.markdown(
+            f"<div style='font-weight: {font_weight}; color:{question_color};padding: 10px; border: 3px solid {question_color}; border-radius:10px;'>"
+            f"{question}</div>", unsafe_allow_html=True)
+
+        st.markdown(
+            f"<div style='color:{answer_color}; background-color: {background_color}; padding: 10px;border-radius:10px;margin-bottom: 20px;font-weight: 900;'>Answer: {answer}</div>",
+            unsafe_allow_html=True)
+
+if __name__ == "__main__":
+    main()

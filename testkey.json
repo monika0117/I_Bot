@@ -1,0 +1,1163 @@
+[
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'intrepid'.",
+        "answer": "Fearless",
+        "options": ["Timid", "Cautious", "Brave", "Fearless"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the antonym for the word 'benevolent'.",
+        "answer": "Malevolent",
+        "options": ["Kind", "Generous", "Altruistic", "Malevolent"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 1, 4, 9, 16, __?",
+        "answer": "25",
+        "options": ["24", "25", "36", "49"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all humans are mortal, and Socrates is a human, can we conclude that Socrates is mortal?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 1, 4, 9, 16, __?",
+        "answer": "25",
+        "options": ["24", "25", "36", "49"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What does CSS stand for?",
+        "answer": "Cascading Style Sheets",
+        "options": [
+            "Computer Style Sheets",
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Colorful Style Sheets"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the father of Y, and Y is the brother of Z, what is the relationship between X and Z?",
+        "answer": "Uncle",
+        "options": ["Father", "Uncle", "Brother", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'vindictive'.",
+        "answer": "Forgiving",
+        "options": ["Vengeful", "Merciless", "Forgiving", "Ruthless"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'ubiquitous'.",
+        "answer": "Omnipresent",
+        "options": ["Rare", "Scarce", "Omnipresent", "Exclusive"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the sequence: 2, 5, 10, 17, __?",
+        "answer": "26",
+        "options": ["24", "25", "26", "27"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all birds can fly, and an ostrich is a bird, can we conclude that an ostrich can fly?",
+        "answer": "No",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 2, 4, 8, 16, __?",
+        "answer": "32",
+        "options": ["24", "32", "64", "128"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the full form of 'HTTP' in computer science?",
+        "answer": "Hypertext Transfer Protocol",
+        "options": [
+            "Hypertext Terminal Protocol",
+            "Hypertext Transfer Process",
+            "Hypertext Transfer Protocol",
+            "Hypertext Tool Protocol"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the sister of B, and B is the son of C, what is the relationship between A and C?",
+        "answer": "Mother",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'adroit'.",
+        "answer": "Skillful",
+        "options": ["Awkward", "Clumsy", "Skillful", "Inept"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the antonym for the word 'ephemeral'.",
+        "answer": "Permanent",
+        "options": ["Short-lived", "Temporary", "Transient", "Permanent"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 3, 6, 12, 24, __?",
+        "answer": "48",
+        "options": ["36", "42", "48", "52"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all mammals are animals, and all animals are living beings, can we conclude that all mammals are living beings?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 3, 9, 27, 81, __?",
+        "answer": "243",
+        "options": ["162", "189", "225", "243"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "Who is known as the father of modern computer science?",
+        "answer": "Alan Turing",
+        "options": ["Alan Turing", "Charles Babbage", "Ada Lovelace", "Tim Berners-Lee"]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the daughter of B, and B is the sister of C, what is the relationship between A and C?",
+        "answer": "Aunt",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'diligent'.",
+        "answer": "Lazy",
+        "options": ["Industrious", "Hardworking", "Diligent", "Lazy"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'exasperate'.",
+        "answer": "Irritate",
+        "options": ["Calm", "Pacify", "Soothe", "Irritate"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 4, 9, 16, 25, __?",
+        "answer": "36",
+        "options": ["34", "35", "36", "37"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all A are B, and all B are C, can we conclude that all A are C?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 5, 10, 15, 20, __?",
+        "answer": "25",
+        "options": ["22", "23", "24", "25"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a firewall in network security?",
+        "answer": "To monitor and control incoming and outgoing network traffic",
+        "options": [
+            "To speed up internet connection",
+            "To create a virtual private network",
+            "To monitor and control incoming and outgoing network traffic",
+            "To encrypt data transmission"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the brother of Y, and Y is the daughter of Z, what is the relationship between X and Z?",
+        "answer": "Uncle",
+        "options": ["Father", "Uncle", "Brother", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'frugal'.",
+        "answer": "Extravagant",
+        "options": ["Sparing", "Economical", "Thrifty", "Extravagant"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'ephemeral'.",
+        "answer": "Transient",
+        "options": ["Permanent", "Lasting", "Eternal", "Transient"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the sequence: 10, 20, 30, 40, __?",
+        "answer": "50",
+        "options": ["48", "49", "50", "51"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all dogs have four legs, and Fido is a dog, can we conclude that Fido has four legs?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 6, 12, 24, 48, __?",
+        "answer": "96",
+        "options": ["90", "92", "94", "96"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What does HTML stand for?",
+        "answer": "Hypertext Markup Language",
+        "options": [
+            "Hypertext Markup Language",
+            "Hyperlink and Text Markup Language",
+            "High Tech Markup Language",
+            "Home Tool Markup Language"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the son of B, and B is the brother of C, what is the relationship between A and C?",
+        "answer": "Nephew",
+        "options": ["Father", "Uncle", "Brother", "Nephew"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'invincible'.",
+        "answer": "Vulnerable",
+        "options": ["Unbeatable", "Indomitable", "Invulnerable", "Vulnerable"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'pervasive'.",
+        "answer": "Ubiquitous",
+        "options": ["Rare", "Scarce", "Ubiquitous", "Exclusive"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the sequence: 15, 30, 45, 60, __?",
+        "answer": "75",
+        "options": ["70", "75", "80", "85"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all squares are rectangles, and all rectangles are polygons, can we conclude that all squares are polygons?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 7, 14, 28, 56, __?",
+        "answer": "112",
+        "options": ["98", "104", "112", "120"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of RAM in a computer?",
+        "answer": "To temporarily store data and program instructions that a computer is currently using",
+        "options": [
+            "To permanently store data and program instructions",
+            "To connect various parts of the computer",
+            "To control input and output devices",
+            "To temporarily store data and program instructions that a computer is currently using"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the daughter of B, and B is the sister of C, what is the relationship between A and C?",
+        "answer": "Aunt",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'discreet'.",
+        "answer": "Indiscreet",
+        "options": ["Cautious", "Prudent", "Discreet", "Indiscreet"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'ameliorate'.",
+        "answer": "Improve",
+        "options": ["Decline", "Deteriorate", "Worsen", "Improve"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the sequence: 12, 24, 36, 48, __?",
+        "answer": "60",
+        "options": ["58", "59", "60", "61"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all mammals have fur, and a bat is a mammal, can we conclude that a bat has fur?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 8, 16, 32, 64, __?",
+        "answer": "128",
+        "options": ["112", "120", "128", "136"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a CPU in a computer?",
+        "answer": "To process data and execute instructions stored in memory",
+        "options": [
+            "To store data and program instructions",
+            "To display output to the user",
+            "To connect various parts of the computer",
+            "To process data and execute instructions stored in memory"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the brother of Y, and Y is the daughter of Z, what is the relationship between X and Z?",
+        "answer": "Uncle",
+        "options": ["Father", "Uncle", "Brother", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'flamboyant'.",
+        "answer": "Understated",
+        "options": ["Showy", "Vibrant", "Extravagant", "Understated"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'pragmatic'.",
+        "answer": "Practical",
+        "options": ["Idealistic", "Theoretical", "Impractical", "Practical"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the sequence: 18, 36, 54, 72, __?",
+        "answer": "90",
+        "options": ["88", "89", "90", "91"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all triangles have three sides, and a square is not a triangle, can we conclude that a square does not have three sides?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 9, 18, 27, 36, __?",
+        "answer": "45",
+        "options": ["42", "44", "45", "48"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of an operating system?",
+        "answer": "To manage hardware and software resources and provide common services for computer programs",
+        "options": [
+            "To connect various parts of the computer",
+            "To control input and output devices",
+            "To manage hardware and software resources and provide common services for computer programs",
+            "To speed up internet connection"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the brother of B, and B is the sister of C, what is the relationship between A and C?",
+        "answer": "Aunt",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "question": "Identify the antonym for the word 'genuine'.",
+        "answer": "Fake",
+        "options": [
+            "Authentic",
+            "Real",
+            "True",
+            "Fake"
+        ]
+    },
+    {
+        "question": "What is the opposite of 'expand'?",
+        "answer": "Contract",
+        "options": [
+            "Extend",
+            "Enlarge",
+            "Expand",
+            "Contract"
+        ]
+    },
+    {
+        "question": "What is the synonym for the word 'meticulous'?",
+        "answer": "Thorough",
+        "options": [
+            "Careless",
+            "Sloppy",
+            "Rigid",
+            "Thorough"
+        ]
+    },
+    {
+        "question": "Choose the word that does not belong: Apple, Orange, Banana, Tomato, Grape",
+        "answer": "Tomato",
+        "options": [
+            "Apple",
+            "Orange",
+            "Banana",
+            "Tomato"
+        ]
+    },
+    {
+        "question": "What is the missing number in the series? 2, 4, 8, 16, __",
+        "answer": "32",
+        "options": [
+            "28",
+            "32",
+            "36",
+            "40"
+        ]
+    },
+    {
+        "question": "Identify the figure that does not belong in the series: A, C, E, G, __",
+        "answer": "F",
+        "options": [
+            "B",
+            "D",
+            "F",
+            "H"
+        ]
+    },
+    {
+        "question": "What comes next in the series? 3, 6, 9, 12, __",
+        "answer": "15",
+        "options": [
+            "16",
+            "17",
+            "18",
+            "15"
+        ]
+    },
+    {
+        "question": "If today is Sunday, what day will it be after 100 days?",
+        "answer": "Thursday",
+        "options": [
+            "Friday",
+            "Saturday",
+            "Sunday",
+            "Thursday"
+        ]
+    },
+    {
+        "question": "If the cost of 4 shirts is $80, what is the cost of 7 shirts?",
+        "answer": "$140",
+        "options": [
+            "$100",
+            "$120",
+            "$140",
+            "$160"
+        ]
+    },
+    {
+        "question": "If a train travels at a speed of 60 km/hour for 5 hours, how far will it travel?",
+        "answer": "300 kilometers",
+        "options": [
+            "250 kilometers",
+            "300 kilometers",
+            "350 kilometers",
+            "400 kilometers"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef modulus(a, b):\n    return a % b\n\nresult = modulus(10, 3)\nprint(result)",
+        "answer": "1",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "question": "Identify the figure that completes the pattern: □, ■, □, ■, __",
+        "answer": "□",
+        "options": [
+            "■",
+            "□",
+            "▲",
+            "◆"
+        ]
+    },
+    {
+        "question": "What is the output of the following Python code snippet?\ndef power(a, b):\n    return a ** b\n\nresult = power(2, 3)\nprint(result)",
+        "answer": "8",
+        "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+    {
+        "question": "Complete the series: 6, 12, 24, 48, __",
+        "answer": "96",
+        "options": [
+            "64",
+            "72",
+            "84",
+            "96"
+        ]
+    },
+    {
+        "question": "If all triangles are circles, and all circles are squares, then can we conclude that all triangles are squares?",
+        "answer": "Yes",
+        "options": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef multiply(a, b):\n    return a * b\n\nresult = multiply(4, 7)\nprint(result)",
+        "answer": "28",
+        "options": [
+            "25",
+            "28",
+            "32",
+            "36"
+        ]
+    },
+    {
+        "question": "If a train travels at a speed of 100 km/hour for 2.5 hours, how far will it travel?",
+        "answer": "250 kilometers",
+        "options": [
+            "200 kilometers",
+            "250 kilometers",
+            "300 kilometers",
+            "350 kilometers"
+        ]
+    },
+    {
+        "question": "If the cost of 5 books is $75, what is the cost of 12 books?",
+        "answer": "$180",
+        "options": [
+            "$100",
+            "$125",
+            "$150",
+            "$180"
+        ]
+    },
+    {
+        "question": "If 20% of a number is 30, what is the number?",
+        "answer": "150",
+        "options": [
+            "100",
+            "120",
+            "150",
+            "180"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef add(a, b):\n    return a + b\n\nresult = add(3, 5)\nprint(result)",
+        "answer": "8",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ]
+    },
+    {
+        "question": "What is the sum of the first 50 natural numbers?",
+        "answer": "1275",
+        "options": [
+            "1225",
+            "1275",
+            "1325",
+            "1375"
+        ]
+    },
+    {
+        "question": "If 20% of a number is 40, what is the number?",
+        "answer": "200",
+        "options": [
+            "100",
+            "120",
+            "150",
+            "200"
+        ]
+    },
+    {
+        "question": "Which of the following is a prime number?",
+        "answer": "29",
+        "options": [
+            "24",
+            "27",
+            "29",
+            "32"
+        ]
+    },
+    {
+        "question": "What is the missing number in the series? 5, 10, 15, 20, __",
+        "answer": "25",
+        "options": [
+            "25",
+            "30",
+            "35",
+            "40"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef divide(a, b):\n    return a / b\n\nresult = divide(10, 3)\nprint(result)",
+        "answer": "3.3333333333333335",
+        "options": [
+            "2.5",
+            "3",
+            "3.3333333333333335",
+            "3.5"
+        ]
+    },
+    {
+        "question": "What is the sum of the first 20 odd numbers?",
+        "answer": "400",
+        "options": [
+            "350",
+            "375",
+            "400",
+            "425"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef subtract(a, b):\n    return a - b\n\nresult = subtract(15, 7)\nprint(result)",
+        "answer": "8",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ]
+    },
+    {
+        "question": "What is the missing number in the series? 3, 5, 8, 12, __",
+        "answer": "17",
+        "options": [
+            "16",
+            "17",
+            "18",
+            "19"
+        ]
+    },
+    {
+        "question": "If the perimeter of a square is 40 cm, what is the length of each side?",
+        "answer": "10 cm",
+        "options": [
+            "8 cm",
+            "10 cm",
+            "12 cm",
+            "14 cm"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef exponent(a, b):\n    return a ** b\n\nresult = exponent(3, 4)\nprint(result)",
+        "answer": "81",
+        "options": [
+            "72",
+            "75",
+            "81",
+            "84"
+        ]
+    },
+    {
+        "question": "If x = 5 and y = 3, what is the value of x^2 - 3xy + y^2?",
+        "answer": "4",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef square_root(a):\n    return a ** 0.5\n\nresult = square_root(25)\nprint(result)",
+        "answer": "5.0",
+        "options": [
+            "4.0",
+            "5.0",
+            "6.0",
+            "7.0"
+        ]
+    },
+    {
+        "question": "If the product of two numbers is 36 and their quotient is 4, what are the two numbers?",
+        "answer": "(9, 4)",
+        "options": [
+            "(6, 6)",
+            "(9, 4)",
+            "(12, 3)",
+            "(8, 5)"
+        ]
+    },
+    {
+        "question": "What is the missing number in the series? 2, 4, 9, 19, __",
+        "answer": "34",
+        "options": [
+            "28",
+            "31",
+            "34",
+            "37"
+        ]
+    },
+    {
+        "question": "What will be the output of the following Python code snippet?\ndef cube(a):\n    return a ** 3\n\nresult = cube(4)\nprint(result)",
+        "answer": "64",
+        "options": [
+            "60",
+            "61",
+            "63",
+            "64"
+        ]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'serene'.",
+        "answer": "Tranquil",
+        "options": ["Agitated", "Chaotic", "Tranquil", "Turbulent"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the antonym for the word 'mundane'.",
+        "answer": "Extraordinary",
+        "options": ["Common", "Routine", "Ordinary", "Extraordinary"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 6, 12, 18, 24, __?",
+        "answer": "30",
+        "options": ["28", "30", "32", "36"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all squares are rectangles, and all rectangles have four sides, can we conclude that all squares have four sides?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 10, 20, 30, 40, __?",
+        "answer": "50",
+        "options": ["48", "50", "52", "54"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What does HTML5 offer that HTML4 does not?",
+        "answer": "Improved multimedia support and better compatibility with mobile devices",
+        "options": [
+            "Enhanced text formatting",
+            "Improved multimedia support and better compatibility with mobile devices",
+            "Stronger encryption standards",
+            "Faster page loading times"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the niece of B, and B is the brother of C, what is the relationship between A and C?",
+        "answer": "Uncle",
+        "options": ["Father", "Uncle", "Brother", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'ambiguous'.",
+        "answer": "Clear",
+        "options": ["Vague", "Unclear", "Ambiguous", "Obvious"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'gregarious'.",
+        "answer": "Sociable",
+        "options": ["Introverted", "Reserved", "Sociable", "Withdrawn"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 7, 14, 21, 28, __?",
+        "answer": "35",
+        "options": ["33", "35", "37", "42"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all triangles have three sides, and a square is not a triangle, can we conclude that a square has three sides?",
+        "answer": "No",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 12, 24, 36, 48, __?",
+        "answer": "60",
+        "options": ["58", "60", "62", "64"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of an Ethernet cable?",
+        "answer": "To connect devices to a local area network (LAN) or the internet",
+        "options": [
+            "To provide power to computer hardware components",
+            "To transmit wireless signals between devices",
+            "To connect peripheral devices to a computer",
+            "To connect devices to a local area network (LAN) or the internet"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the daughter of Y, and Y is the sister of Z, what is the relationship between X and Z?",
+        "answer": "Aunt",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'ravenous'.",
+        "answer": "Satiated",
+        "options": ["Starving", "Hungry", "Famished", "Satiated"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'resilient'.",
+        "answer": "Durable",
+        "options": ["Fragile", "Weak", "Brittle", "Durable"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 8, 16, 24, 32, __?",
+        "answer": "40",
+        "options": ["38", "40", "42", "48"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all mammals give birth to live young, and a whale is a mammal, can we conclude that a whale gives birth to live young?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 14, 28, 42, 56, __?",
+        "answer": "70",
+        "options": ["68", "70", "72", "74"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a DNS server?",
+        "answer": "To translate domain names into IP addresses",
+        "options": [
+            "To provide secure access to websites",
+            "To filter internet traffic based on predefined rules",
+            "To host websites and web applications",
+            "To translate domain names into IP addresses"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the grandson of B, and B is the father of C, what is the relationship between A and C?",
+        "answer": "Uncle",
+        "options": ["Father", "Uncle", "Brother", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'precocious'.",
+        "answer": "Immature",
+        "options": ["Gifted", "Talented", "Advanced", "Immature"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'effervescent'.",
+        "answer": "Bubbly",
+        "options": ["Flat", "Lifeless", "Dull", "Bubbly"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 10, 20, 30, 40, __?",
+        "answer": "50",
+        "options": ["45", "50", "55", "60"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all birds have feathers, and a bat is not a bird, can we conclude that a bat has feathers?",
+        "answer": "No",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 18, 36, 54, 72, __?",
+        "answer": "90",
+        "options": ["86", "90", "94", "98"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a firewall?",
+        "answer": "To protect a network by controlling incoming and outgoing traffic",
+        "options": [
+            "To boost the speed of internet connections",
+            "To store and manage data backups",
+            "To optimize the performance of computer hardware",
+            "To protect a network by controlling incoming and outgoing traffic"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the sister of Y, and Y is the brother of Z, what is the relationship between X and Z?",
+        "answer": "Sister",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'vindictive'.",
+        "answer": "Forgiving",
+        "options": ["Vengeful", "Revengeful", "Malicious", "Forgiving"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'ebullient'.",
+        "answer": "Enthusiastic",
+        "options": ["Depressed", "Morose", "Gloomy", "Enthusiastic"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 12, 24, 36, 48, __?",
+        "answer": "60",
+        "options": ["62", "64", "66", "60"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all reptiles lay eggs, and a snake is a reptile, can we conclude that a snake lays eggs?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 22, 44, 66, 88, __?",
+        "answer": "110",
+        "options": ["106", "108", "110", "112"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of an operating system?",
+        "answer": "To manage hardware and software resources and provide common services for computer programs",
+        "options": [
+            "To design and develop websites and web applications",
+            "To protect a network from unauthorized access",
+            "To analyze and visualize complex data sets",
+            "To manage hardware and software resources and provide common services for computer programs"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the granddaughter of B, and B is the father of C, what is the relationship between A and C?",
+        "answer": "Uncle",
+        "options": ["Father", "Uncle", "Brother", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'frugal'.",
+        "answer": "Extravagant",
+        "options": ["Economical", "Thrifty", "Stingy", "Extravagant"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'maverick'.",
+        "answer": "Nonconformist",
+        "options": ["Traditionalist", "Conformist", "Conservative", "Nonconformist"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 14, 28, 42, 56, __?",
+        "answer": "70",
+        "options": ["68", "70", "72", "74"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all fish live in water, and a dolphin is a fish, can we conclude that a dolphin lives in water?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 26, 52, 78, 104, __?",
+        "answer": "130",
+        "options": ["128", "130", "132", "134"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a router?",
+        "answer": "To forward data packets between computer networks",
+        "options": [
+            "To scan for and remove viruses from computer systems",
+            "To create and manage databases",
+            "To process and execute computer programs",
+            "To forward data packets between computer networks"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the son of Y, and Y is the sister of Z, what is the relationship between X and Z?",
+        "answer": "Aunt",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'ephemeral'.",
+        "answer": "Permanent",
+        "options": ["Fleeting", "Transitory", "Temporary", "Permanent"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'efficacious'.",
+        "answer": "Effective",
+        "options": ["Ineffective", "Useless", "Inefficient", "Effective"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 16, 32, 48, 64, __?",
+        "answer": "80",
+        "options": ["72", "76", "80", "84"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all mammals have hair or fur, and a snake is not a mammal, can we conclude that a snake has hair or fur?",
+        "answer": "No",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 30, 60, 90, 120, __?",
+        "answer": "150",
+        "options": ["148", "150", "152", "154"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of RAM (Random Access Memory) in a computer?",
+        "answer": "To temporarily store data and program instructions that the CPU (central processing unit) needs to access quickly",
+        "options": [
+            "To store permanent data and program instructions for long-term use",
+            "To provide additional storage space for files and documents",
+            "To display graphics and images on a computer monitor",
+            "To temporarily store data and program instructions that the CPU (central processing unit) needs to access quickly"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the grandfather of B, and B is the granddaughter of C, what is the relationship between A and C?",
+        "answer": "Grandfather",
+        "options": ["Father", "Grandfather", "Uncle", "Cousin"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'ubiquitous'.",
+        "answer": "Rare",
+        "options": ["Common", "Widespread", "Pervasive", "Rare"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'resplendent'.",
+        "answer": "Radiant",
+        "options": ["Dull", "Gloomy", "Dim", "Radiant"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 18, 36, 54, 72, __?",
+        "answer": "90",
+        "options": ["88", "90", "92", "94"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all insects have six legs, and a spider is not an insect, can we conclude that a spider has six legs?",
+        "answer": "No",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 34, 68, 102, 136, __?",
+        "answer": "170",
+        "options": ["168", "170", "172", "174"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a CPU (Central Processing Unit) in a computer?",
+        "answer": "To execute instructions and perform calculations for computer programs",
+        "options": [
+            "To store and manage data files",
+            "To display images and videos on a computer screen",
+            "To connect peripheral devices to a computer system",
+            "To execute instructions and perform calculations for computer programs"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If X is the brother of Y, and Y is the daughter of Z, what is the relationship between X and Z?",
+        "answer": "Mother",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'sycophant'.",
+        "answer": "Independent",
+        "options": ["Flatterer", "Adulator", "Fawner", "Independent"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'ephemeral'.",
+        "answer": "Transient",
+        "options": ["Permanent", "Enduring", "Everlasting", "Transient"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 20, 40, 60, 80, __?",
+        "answer": "100",
+        "options": ["98", "100", "102", "104"]
+    },
+    {
+        "category": "Logical Reasoning",
+        "question": "If all mammals give birth to live young, and a platypus is a mammal, can we conclude that a platypus gives birth to live young?",
+        "answer": "Yes",
+        "options": ["Yes", "No"]
+    },
+    {
+        "category": "Quantitative Reasoning",
+        "question": "What is the next number in the sequence: 42, 84, 126, 168, __?",
+        "answer": "210",
+        "options": ["208", "210", "212", "214"]
+    },
+    {
+        "category": "Computer Science",
+        "question": "What is the purpose of a GPU (Graphics Processing Unit) in a computer?",
+        "answer": "To render images, videos, and animations for display on a computer monitor",
+        "options": [
+            "To perform calculations and execute instructions for computer programs",
+            "To store and manage data files",
+            "To connect peripheral devices to a computer system",
+            "To render images, videos, and animations for display on a computer monitor"
+        ]
+    },
+    {
+        "category": "Blood Relation",
+        "question": "If A is the aunt of B, and B is the nephew of C, what is the relationship between A and C?",
+        "answer": "Grandmother",
+        "options": ["Mother", "Aunt", "Sister", "Grandmother"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Select the word that is most nearly opposite in meaning to the word 'exacerbate'.",
+        "answer": "Alleviate",
+        "options": ["Aggravate", "Worsen", "Intensify", "Alleviate"]
+    },
+    {
+        "category": "Verbal Reasoning",
+        "question": "Choose the word that is most similar in meaning to the word 'resolute'.",
+        "answer": "Determined",
+        "options": ["Weak", "Indecisive", "Fickle", "Determined"]
+    },
+    {
+        "category": "Diagrammatic Reasoning",
+        "question": "What comes next in the series: 22, 44, 66, 88, __?",
+        "answer": "110",
+        "options": ["108", "110", "112", "114"]
+    }
+]
+       
