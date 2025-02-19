@@ -1,6 +1,7 @@
 import mysql.connector
 import streamlit as st
 import PyPDF2
+from PIL import Image
 import gtts
 from io import BytesIO
 import os
@@ -152,7 +153,25 @@ def main():
 
 
 def authenticate_and_register():
-    st.header(" :scroll: Welcome!")
+    image = Image.open("./logo/mainlogo.png")
+    resized_image = image.resize((640, 360))
+    col1, col2, col3 = st.columns([1, 2, 1])
+    st.markdown(
+            """
+            <style>
+            div.block-container {
+                margin-top: -80px;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True,
+    )
+
+    # Layout to center the image
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image(resized_image)
+
     
     if 'choice' not in st.session_state:
         st.session_state.choice = None
@@ -204,14 +223,32 @@ def authenticate_and_register():
 
 
 def run_streamlit_app():
-        # Logout Button
+    
+  
+    st.set_page_config(
+    page_title="I_Bot", 
+    page_icon="./logo/tab.png",  
+    layout="centered",  
+    initial_sidebar_state="auto",  
+    )
+    with open("style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    image = Image.open("./logo/mainlogo.png")
+    resized_image = image.resize((640, 360))
+    col1, col2, col3 = st.columns([1, 2, 1])
+   
+
+    # Layout to center the image
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image(resized_image)
+
     with st.sidebar:
         if 'authenticated' in st.session_state and st.session_state.authenticated:
                     current_user = st.session_state.get('username', 'Guest')
-                    st.title(f"Welcome, {current_user}!")  # Display the username as the title
+                    st.title(f"Welcome, {current_user}!") 
         else:
-                    st.title("Welcome to the App!")  # Default title for non-authenticated users
-
+                    st.title("Welcome to the App!")
         if st.button("Logout"):
             st.session_state.authenticated = False
             st.session_state.choice = None
@@ -219,7 +256,9 @@ def run_streamlit_app():
             # Clear all session state variables
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
-            st.query_params = {"param_name": "value"}
+            st.query_params = {"param_name": "value"}  
+
+        
 
     
     if "audio_playing" not in st.session_state:
@@ -308,6 +347,9 @@ def run_streamlit_app():
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "testing2.py", transfer,text],)).start()
     if st.sidebar.button("Generate aptitude test"):
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "zen.py", text],)).start()
+    
 
 if __name__ == "__main__":
+    
     main()
+    
