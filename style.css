@@ -78,19 +78,14 @@ div.stButton> button[key="login_button"]{
     border: solid 1px var(--maincolor);
 }
 /*sidebtns*/
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(2) > div > button,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(6) > div > button,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(7) > div > button,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(4) > div > section > button,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(3) > div > button{
+button[data-testid="stBaseButton-secondary"]{
     background: var(--seccolor);
     color: var(--maincolor);
 }
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(2) > div > button:hover,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(6) > div > button:hover,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(7) > div > button:hover,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(4) > div > section > button:hover{
-    border: none;
+button[data-testid="stBaseButton-secondary"]:hover{
+    border: solid 1px #fff ;
+    color: #fff;
+    background: var(--grad);
 }
 /*generate_text*/
 #root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-jx703m.ekr3hml4 > div > div > div > div:nth-child(4) > div > div > div{

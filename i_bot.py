@@ -346,10 +346,12 @@ def run_streamlit_app():
 
             
     st.sidebar.caption("Utilities")
-    if st.sidebar.button("Generate interview questions"):
+    if st.sidebar.button("Generate Technical Question"):
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "testing2.py", transfer,text],)).start()
-    if st.sidebar.button("Generate aptitude test"):
+    if st.sidebar.button("Generate Mock Test"):
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "zen.py", text],)).start()
+    if st.sidebar.button("Check ATS Score"):
+        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "ats.py"],)).start()
 
                     
     
