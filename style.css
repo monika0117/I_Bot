@@ -1,10 +1,47 @@
 :root{
     --maincolor:#735DA5;
     --seccolor:#D3C5E5;
+    --thirdcolor:#cdadf5;
+
     --grad:linear-gradient(90deg,#ccb8e6, #D3C5E5);
 
 }
-/*body*/
+/*login page*/
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1{
+    background: var(--seccolor);
+}
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-yw8pof.ekr3hml4 > div > div > div > div:nth-child(4) > div.stColumn.st-emotion-cache-1eoatk1.eiemyj2 > div > div > div > div > div > div > div.stImage.st-emotion-cache-1dvmtd8.e1wa958q0 > div > img{
+    height: 120px;
+    width:340px;
+    margin-top: 50px;
+}
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-yw8pof.ekr3hml4 > div > div > div{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-yw8pof.ekr3hml4 > div > div > div > div:nth-child(6) > div > div,#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-yw8pof.ekr3hml4 > div > div > div > div:nth-child(7) > div > div{
+    background: var(--seccolor);
+    border: solid 2px var(--maincolor);
+    border-radius: 5px;
+    
+    
+}
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-yw8pof.ekr3hml4 > div > div > div > div:nth-child(7) > div > div > div > button,
+input[type="text"],input[type="password"]{
+    color: var(--maincolor);
+    background: var(--seccolor);
+    
+}
+div.stButton> button[key="login_button"]{    
+    background: var(--maincolor);
+    color: var(--seccolor);
+}
+
+/*mainpage_body*/
 #root > div:nth-child(1) > div.withScreencast > div > header{
      background: none; 
 }
@@ -44,7 +81,8 @@
 #root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(2) > div > button,
 #root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(6) > div > button,
 #root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(7) > div > button,
-#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(4) > div > section > button{
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(4) > div > section > button,
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(3) > div > button{
     background: var(--seccolor);
     color: var(--maincolor);
 }
@@ -54,3 +92,27 @@
 #root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8 > div.st-emotion-cache-a6qe2i.e1dbuyne7 > div > div > div > div > div:nth-child(4) > div > section > button:hover{
     border: none;
 }
+/*generate_text*/
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stMainBlockContainer.block-container.st-emotion-cache-jx703m.ekr3hml4 > div > div > div > div:nth-child(4) > div > div > div{
+    background: #fff;
+    color: black;
+}
+
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1 > div.stBottom.st-emotion-cache-1p2n2i4.ekr3hml2 > div > div > div > div > div > div.stElementContainer.element-container.st-emotion-cache-u5rpwv.eiemyj1{
+    display: none;
+}
+#MainMenu > button,
+#root > div:nth-child(1) > div.withScreencast > div > div > div > div.st-emotion-cache-19ee8pt.e1dbuyne15 > button{
+    color: var(--maincolor);
+    fill: var(--maincolor);
+}
+#MainMenu > button:hover,
+
+#root > div:nth-child(1) > div.withScreencast > div > div > div > div.st-emotion-cache-19ee8pt.e1dbuyne15 > button:hover{
+    color: var(--maincolor);
+    fill: var(--maincolor);
+    background: #fff;
+    border: solid 1px var(--maincolor);
+}
+.stRadio {
+    color: #008CBA !important; }

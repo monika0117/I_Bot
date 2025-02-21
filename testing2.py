@@ -110,8 +110,15 @@ def generate_interview_resume(keywords, total_questions):
     return qa_pairs
 
 
+
+
+
 def main():
-    st.title("Question and Answer Generation")
+    
+    with open("style_2.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)    
+        st.title("Question and Answer Generation")
+       
 
     if len(sys.argv) > 2:
         text = sys.argv[1]
@@ -126,7 +133,7 @@ def main():
             resume_keywords = extract_lines(me_dialogues)
             resume_keywords_list = list(resume_keywords.values())
 
-            model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyBsIol3W7uSeFIEBRkKA3Myd48XpJUxs6Y")
+            model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw")
 
             qa_pairs = generate_interview_questions_and_answers(model, keywords)
             render_qa_pairs(qa_pairs)
@@ -146,11 +153,11 @@ def render_qa_pairs(qa_pairs):
 
     for question, answer in qa_pairs:
         st.markdown(
-            f"<div style='font-weight: {font_weight}; color:{question_color};padding: 10px; border: 3px solid {question_color}; border-radius:10px;'>"
+            f"<div style='font-weight: {font_weight}; color:#fff; padding: 10px; background:#735DA5;border-radius:10px;'>"
             f"{question}</div>", unsafe_allow_html=True)
 
         st.markdown(
-            f"<div style='color:{answer_color}; background-color: {background_color}; padding: 10px;border-radius:10px;margin-bottom: 20px;font-weight: 900;'>Answer: {answer}</div>",
+            f"<div style='color:{answer_color}; ; padding: 10px;border-radius:10px;margin: 10px;font-weight: 500;text-align:left;'>Answer: {answer}</div>",
             unsafe_allow_html=True)
 
 if __name__ == "__main__":

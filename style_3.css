@@ -1,0 +1,74 @@
+:root{
+    --maincolor:#735DA5;
+    --seccolor:#D3C5E5;
+    --thirdcolor:#cdadf5;
+
+    --grad:linear-gradient(90deg,#ccb8e6, #D3C5E5);
+
+}
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stMain.st-emotion-cache-bm2z3a.ekr3hml1{
+    background: var(--seccolor);
+}
+#root > div:nth-child(1) > div.withScreencast > div > header{
+    background: var(--seccolor);
+
+
+}
+#root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1dbuyne0 > div.st-emotion-cache-6qob1r.e1dbuyne8{
+    background: var(--maincolor);
+    
+}
+#aptitude-test-generator{
+    margin-top: -80px;
+    text-align: center;
+}
+
+label[data-testid="stWidgetLabel"] {
+    background-color: var(--maincolor);  
+    padding-block: 10px;
+    padding-inline: 20px;
+    margin:5px;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+p{
+    font-size: 20px;
+}
+div[role="radiogroup"] {
+    background-color: #f8f9fa;  
+    padding-inline: 15px;
+    padding-block: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+button[data-testid="stPopoverButton"],[data-testid="stBaseButton-secondary"]{
+    background: var(--maincolor);
+    color: #fff;
+    
+}
+button[data-testid="stPopoverButton"]:hover,[data-testid="stBaseButton-secondary"]:hover{
+    background: none;
+    color:var(--maincolor);
+    border: solid 1px var(--maincolor);
+}
+
+
+
+#MainMenu > button,
+#root > div:nth-child(1) > div.withScreencast > div > div > div > div.st-emotion-cache-19ee8pt.e1dbuyne15 > button{
+    color: var(--maincolor);
+    fill: var(--maincolor);
+}
+#MainMenu > button:hover,
+
+#root > div:nth-child(1) > div.withScreencast > div > div > div > div.st-emotion-cache-19ee8pt.e1dbuyne15 > button:hover{
+    color: var(--maincolor);
+    fill: var(--maincolor);
+    background: #fff;
+    border: solid 1px var(--maincolor);
+}

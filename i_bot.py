@@ -33,7 +33,7 @@ try:
 except Exception as e:
     print("Error:", e)
 
-GOOGLE_API_KEY = "AIzaSyBsIol3W7uSeFIEBRkKA3Myd48XpJUxs6Y"
+GOOGLE_API_KEY = "AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw"
 llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY)
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GOOGLE_API_KEY)
 
@@ -115,29 +115,7 @@ def extract_and_process_text(uploaded_text):
             st.error(f"Model stopped generating: {e}")
             return "", ""
 
-@st.cache_data
-def generate_audio(result):
-    try:
-        if os.path.exists("audio.mp3"):
-            stop_and_quit_mixer()
-            os.remove("audio.mp3")
-        
-        t1 = gtts.gTTS(result)
-        t1.save("audio.mp3")
-    except Exception as e:
-        st.error(f"Error generating audio: {str(e)}")
 
-def stop_audio():
-    try:
-        if pygame.mixer.music.get_busy():
-            pygame.mixer.music.stop()
-            st.success("Audio stopped.")
-    except Exception as e:
-        st.error(f"Error stopping audio: {str(e)}")
-
-def stop_and_quit_mixer():
-    pygame.mixer.music.stop()
-    pygame.mixer.quit()
     
 #Database    
 def main():
@@ -153,6 +131,8 @@ def main():
 
 
 def authenticate_and_register():
+    with open("style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     image = Image.open("./logo/mainlogo.png")
     resized_image = image.resize((640, 360))
     col1, col2, col3 = st.columns([1, 2, 1])
@@ -187,6 +167,8 @@ def authenticate_and_register():
         st.header("Login Page")
         username = st.text_input("Username:")
         password = st.text_input("Password:", type="password")
+        with open("style.css") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
         login_button = st.button("Done", key="login_button")
 
         if login_button:
@@ -212,6 +194,9 @@ def authenticate_and_register():
         st.header("Register Page")
         new_username = st.text_input("New Username:")
         new_password = st.text_input("New Password:", type="password")
+        
+        with open("style.css") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
         if st.button("Done"):
             if register_user(new_username, new_password):
@@ -256,7 +241,31 @@ def run_streamlit_app():
             # Clear all session state variables
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
-            st.query_params = {"param_name": "value"}  
+            st.query_params = {"param_name": "value"}
+    
+    def generate_audio(text):
+        try:
+            if os.path.exists("audio.mp3"):
+                stop_and_quit_mixer()  # Stop any running audio before generating new
+                os.remove("audio.mp3")
+
+            t1 = gtts.gTTS(text)  # Convert text to speech
+            t1.save("audio.mp3")
+
+            # ✅ Ensure pygame.mixer is initialized
+            if not pygame.mixer.get_init():
+                pygame.mixer.init()
+
+            pygame.mixer.music.load("audio.mp3")
+
+        except Exception as e:
+            st.error(f"Error generating audio: {str(e)}")
+    
+    def stop_and_quit_mixer():
+        if pygame.mixer.get_init():  # ✅ Check if mixer is running before stopping
+            pygame.mixer.music.stop()
+            pygame.mixer.quit()
+
 
         
 
@@ -306,50 +315,46 @@ def run_streamlit_app():
         if st.session_state.uploaded_text:
             result,transfer = extract_and_process_text(st.session_state.uploaded_text)
             with st._main:
-                question_color = "#1064CE" 
                 answer_color = "#000000"
-                new_color="#FFFFFF"
-                background_color = "#C7E5F9"
-                font_weight=900 
+                background_color = "#fff"
                 st.markdown(f"<div style='color:{answer_color}; background-color: {background_color}; padding: 10px;border-radius:10px;margin-bottom: 20px;'>{result}</div>",unsafe_allow_html=True,)
         with st._bottom:
             st.markdown("-----")
             c1, c2, c3 = st.columns(3)
 
-            # Column 1: Play/Stop button for audio
         with c1:
-            if st.session_state.audio_playing:
-                # Show stop button when audio is playing
-                toggle_button = st.button("🔊 Play Audio")
-                # if toggle_button and st.session_state.audio_playing:
-                stop_and_quit_mixer()
-                st.session_state.audio_playing = False
-            else:
-                # Show play button when audio is not playing
-                toggle_button = st.button("🔇 Stop Audio")
-                # if toggle_button and not st.session_state.audio_playing:
-                if st.session_state.uploaded_text:
-                        generate_audio(st.session_state.uploaded_text)  # Generate the audio
+            if "audio_playing" not in st.session_state:
+                st.session_state.audio_playing = False  # Initialize audio state
+
+            # ✅ Dynamically change button label
+            button_label = "🔊 Play Audio" if not st.session_state.audio_playing else "🔇 Stop Audio"
+
+            # ✅ Use session state key for button (prevents double-click issues)
+            if st.button(button_label, key="audio_toggle"):
+                if st.session_state.audio_playing:
+                    stop_and_quit_mixer()  # Stop audio
+                    st.session_state.audio_playing = False  # Update state
+                else:
+                    if st.session_state.uploaded_text:
+                        generate_audio(result)  # ✅ Generate audio from result
                         pygame.mixer.music.load("audio.mp3")
                         pygame.mixer.music.play()
-                        st.session_state.audio_playing = True
+                        st.session_state.audio_playing = True  # Update state
 
-        # Column 3: Additional information
-        with c3:
-            with st.popover("🔴 To Know"):
-                st.text("* After uploading resume only, generating QA will work")
-                st.text("* After uploading resume only, generating Apti will work")
-    if st.session_state.audio_playing:
-        st.write("Audio is playing...")
-                    
+    # ✅ No need for `st.rerun()`, UI updates automatically on next interaction
+
+
+            
     st.sidebar.caption("Utilities")
     if st.sidebar.button("Generate interview questions"):
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "testing2.py", transfer,text],)).start()
     if st.sidebar.button("Generate aptitude test"):
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "zen.py", text],)).start()
+
+                    
+    
     
 
-if __name__ == "__main__":
-    
+if __name__ == "__main__":    
     main()
     

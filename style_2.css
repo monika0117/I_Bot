@@ -1,0 +1,18 @@
+/**page2**/
+:root{
+    --maincolor:#735DA5;
+    --seccolor:#D3C5E5;
+    --thirdcolor:#cdadf5;
+
+    --grad:linear-gradient(90deg,#ccb8e6, #D3C5E5);
+
+}
+#root > div:nth-child(1) > div.withScreencast > div > div{
+    background: var(--seccolor);
+}
+#root > div:nth-child(1) > div.withScreencast > div > header{
+    background: var(--seccolor);
+}
+#question-and-answer-generation{
+    margin-top: -80px;
+}

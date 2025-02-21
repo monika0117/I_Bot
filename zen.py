@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+import subprocess
 import json
 from langchain_google_genai import GoogleGenerativeAI
 import uuid
@@ -105,16 +106,24 @@ def extract_skills(text, keywords_data):
 
 # Streamlit app
 def main():
+    with open("style_3.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     st.title("Aptitude Test Generator")
+    
     with st.sidebar:
-        st.image(width=300,image='https://i.gifer.com/7E1c.gif')
-        st.markdown("<br>",unsafe_allow_html=True)
-        st.markdown("click to reset",unsafe_allow_html=True)
+        btn1 = st.button("Self Intro")
+        btn2 = st.button("ATS Score")
+        btn3 = st.button("Interview Question")
+
+        # Handling button clicks
+        if btn1:
+             subprocess.Popen(["streamlit","run", "i_bot.py"],shell=True)
+       
+
+        if btn3:
+            subprocess.Popen(["streamlit","run", "testing2.py"],shell=True)
         
-        if st.button("🔃 Re-test"):
-            st.session_state.questions_generated = False
-            print("Refreshing Test")
-            st.rerun()
+        
 
     if "questions_generated" not in st.session_state:
         st.session_state.questions_generated = False
@@ -123,7 +132,7 @@ def main():
         num_questions = st.slider("Select the number of questions", min_value=1, max_value=100, value=5)
         st.session_state.num_questions = num_questions
 
-        if st.toggle("Submit"):
+        if st.button("Generate"):
             keywords_data = load_keywords()
             text = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] != "" else ""
             if keywords_data and text:
@@ -156,6 +165,11 @@ def main():
                 with st.popover("Answers"):
                     for i in range(1, (len(correct_answers)) + 1):
                         st.write(i, correct_answers[i - 1])
+    with st._main:
+                if st.button("🔃 Re-test"):
+                    st.session_state.questions_generated = False
+                    print("Refreshing Test")
+                    st.rerun()
 
 if __name__ == "__main__":
     main()
