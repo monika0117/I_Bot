@@ -212,7 +212,7 @@ def run_streamlit_app():
   
     st.set_page_config(
     page_title="I_Bot", 
-    page_icon="./logo/tab.png",  
+    page_icon="./logo/ic.png",  
     layout="centered",  
     initial_sidebar_state="auto",  
     )
