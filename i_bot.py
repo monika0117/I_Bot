@@ -1,4 +1,3 @@
-import mysql.connector
 import streamlit as st
 import PyPDF2
 from PIL import Image
@@ -6,15 +5,12 @@ import gtts
 from io import BytesIO
 import os
 import subprocess
-import sys
 import threading
 import magic
 import requests
 import streamlit as st
 from docx2pdf import convert
 import pygame
-import comtypes
-import comtypes.client
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain_text_splitters import CharacterTextSplitter
@@ -347,11 +343,11 @@ def run_streamlit_app():
             
     st.sidebar.caption("Utilities")
     if st.sidebar.button("Generate Technical Question"):
-        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "testing2.py", transfer,text],)).start()
+        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "Que_Ans.py", transfer,text],)).start()
     if st.sidebar.button("Generate Mock Test"):
-        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "zen.py", text],)).start()
+        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "Mock_Test.py", text],)).start()
     if st.sidebar.button("Check ATS Score"):
-        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "ats.py"],)).start()
+        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "Ats_Score.py"],)).start()
 
                     
     

@@ -12,6 +12,7 @@ import google.generativeai as genai
 model = genai.GenerativeModel('gemini-1.5-flash')
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+
 def get_gemini_response(input_text, pdf_content, prompt):
     model = genai.GenerativeModel('gemini-1.5-flash')  # Use 1.5 instead of deprecated version
     response = model.generate_content([input_text, pdf_content[0], prompt])
@@ -41,8 +42,10 @@ def input_pdf_setup(uploaded_file):
 
 
 ## Streamlit App
+with open("style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.set_page_config(page_title="ATS Resume EXpert")
+# st.set_page_config(page_title="ATS Resume EXpert")
 st.header("ATS Tracking System")
 input_text=st.text_area("Job Description: ",key="input")
 uploaded_file=st.file_uploader("Upload your resume(PDF)...",type=["pdf"])
@@ -54,7 +57,7 @@ if uploaded_file is not None:
 
 submit1 = st.button("Tell Me About the Resume")
 
-#submit2 = st.button("How Can I Improvise my Skills")
+submit2 = st.button("How Can I Improvise my Skills")
 
 submit3 = st.button("Percentage match")
 

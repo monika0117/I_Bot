@@ -8,7 +8,6 @@ import re
 import sys
 
 
-
 # Load the test questions from the JSON file
 with open("testkey.json", "r") as file:
     test_questions = json.load(file)
@@ -108,20 +107,9 @@ def extract_skills(text, keywords_data):
 def main():
     with open("style_3.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    st.title("Aptitude Test Generator")
+    st.title("Mock Test")
     
-    with st.sidebar:
-        btn1 = st.button("Self Intro")
-        btn2 = st.button("ATS Score")
-        btn3 = st.button("Interview Question")
 
-        # Handling button clicks
-        if btn1:
-             subprocess.Popen(["streamlit","run", "i_bot.py"],shell=True)
-       
-
-        if btn3:
-            subprocess.Popen(["streamlit","run", "testing2.py"],shell=True)
         
         
 
