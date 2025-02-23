@@ -125,7 +125,7 @@ def main():
             text = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] != "" else ""
             if keywords_data and text:
                 keywords = extract_skills(text, keywords_data)
-                model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyBsIol3W7uSeFIEBRkKA3Myd48XpJUxs6Y")
+                model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw")
                 generated_questions = []
                 for keyword in keywords[:num_questions]:
                     question_id = str(uuid.uuid4())

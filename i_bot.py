@@ -9,6 +9,7 @@ import threading
 import magic
 import requests
 import streamlit as st
+from dotenv import load_dotenv
 from docx2pdf import convert
 import pygame
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
@@ -19,9 +20,11 @@ from langchain.chains import create_retrieval_chain
 from langchain_community.vectorstores import FAISS
 import win32com.client
 from database import authenticate_user, register_user
+
+
 # Initialize pygame mixer
 pygame.mixer.init()
-
+load_dotenv()
 # Initialize comtypes
 try:
     word_application = win32com.client.Dispatch("Word.Application")
@@ -29,8 +32,8 @@ try:
 except Exception as e:
     print("Error:", e)
 
-GOOGLE_API_KEY = "AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw"
-llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY)
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GOOGLE_API_KEY)
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GOOGLE_API_KEY)
 
 def convert_docx_to_pdf(docx_file):
@@ -260,10 +263,7 @@ def run_streamlit_app():
     def stop_and_quit_mixer():
         if pygame.mixer.get_init():  # ✅ Check if mixer is running before stopping
             pygame.mixer.music.stop()
-            pygame.mixer.quit()
-
-
-        
+            pygame.mixer.quit()   
 
     
     if "audio_playing" not in st.session_state:
@@ -336,10 +336,6 @@ def run_streamlit_app():
                         pygame.mixer.music.load("audio.mp3")
                         pygame.mixer.music.play()
                         st.session_state.audio_playing = True  # Update state
-
-    # ✅ No need for `st.rerun()`, UI updates automatically on next interaction
-
-
             
     st.sidebar.caption("Utilities")
     if st.sidebar.button("Generate Technical Question"):
@@ -347,9 +343,7 @@ def run_streamlit_app():
     if st.sidebar.button("Generate Mock Test"):
         threading.Thread(target=subprocess.run, args=(["streamlit", "run", "Mock_Test.py", text],)).start()
     if st.sidebar.button("Check ATS Score"):
-        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "Ats_Score.py"],)).start()
-
-                    
+        threading.Thread(target=subprocess.run, args=(["streamlit", "run", "Ats_Score.py"],)).start()                  
     
     
 

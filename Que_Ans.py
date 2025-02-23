@@ -83,7 +83,7 @@ def generate_interview_resume(keywords, total_questions):
         return []
 
     # GoogleGenerativeAI for Gemini
-    model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyBsIol3W7uSeFIEBRkKA3Myd48XpJUxs6Y")
+    model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw")
 
     qa_pairs = []
 
