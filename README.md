@@ -10,7 +10,7 @@
 Step 1: Clone this Respository into your terminal - git clone https://github.com/monika0117/I_Bot.git
 
 
-Step 2 : Install requiremnet.txt file - pip install -r requirements.txt
+Step 2 : Install requiremnet.txt file - pip install -r requirement.txt
 
 
 <.....Sucessfully Setup as Local.....>
