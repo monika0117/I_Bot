@@ -6,6 +6,12 @@ from langchain_google_genai import GoogleGenerativeAI
 import uuid
 import re
 import sys
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+google_api_key = os.getenv("GOOGLE_API_KEY")
 
 
 # Load the test questions from the JSON file
@@ -125,7 +131,7 @@ def main():
             text = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] != "" else ""
             if keywords_data and text:
                 keywords = extract_skills(text, keywords_data)
-                model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw")
+                model = GoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=google_api_key)
                 generated_questions = []
                 for keyword in keywords[:num_questions]:
                     question_id = str(uuid.uuid4())

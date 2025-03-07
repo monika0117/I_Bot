@@ -2,7 +2,13 @@ import sys
 import json
 import re
 import streamlit as st
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAI
+
+load_dotenv()
+google_api_key = os.getenv("GOOGLE_API_KEY")
 
 def load_keywords():
     file_path = "keywords.json"
@@ -50,7 +56,7 @@ def extract_lines(dialogues):
                 extracted_lines[keyword.lower()] = lines
     return extracted_lines
 
-def generate_interview_questions_and_answers(model, keywords, total_questions=9):
+def generate_interview_questions_and_answers(model, keywords, total_questions=20):
     if not keywords:
         raise ValueError("No keywords found. Unable to generate questions.")
 
@@ -61,7 +67,8 @@ def generate_interview_questions_and_answers(model, keywords, total_questions=9)
     for keyword in keywords:
         unique_questions = set()
         for _ in range(num_questions):
-            question_prompt = f"generate one simple {keyword} interview question asked by interviewer?"
+            question_prompt = f"{keyword}"
+            # Generate a question to redue the que length decrease max length
             question_response = model.generate(prompts=[question_prompt], max_length=50, temperature=0.3)
 
             question = question_response.generations[0][0].text.removeprefix("**Question:**").strip()
@@ -77,39 +84,51 @@ def generate_interview_questions_and_answers(model, keywords, total_questions=9)
 
     return qa_pairs
 
-def generate_interview_resume(keywords, total_questions):
+def generate_interview_resume(keywords, total_question):
+    if not google_api_key:
+        print("Error: Google API key is missing.")
+        return []
+    
     if not keywords:
         print("No keywords found. Unable to generate questions.")
         return []
 
-    # GoogleGenerativeAI for Gemini
-    model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw")
+    # Configure API
+    genai.configure(api_key=google_api_key)
+    model = genai.GenerativeModel("gemini-2.0-flash")
 
     qa_pairs = []
+    num_questions_per_keyword = max(1, total_question // len(keywords))  # Ensure at least 1 question per keyword
 
-    # Generate questions for each keyword
     for keyword in keywords:
         unique_questions = set()
 
-        # Generate a single question for each keyword
-        for _ in range(1):
+        for _ in range(num_questions_per_keyword):
+            # Generate a question for the keyword
             question_prompt = f"Generate an interview question related to: {keyword}"
-            question_response = model.generate(prompts=[question_prompt], max_length=50, temperature=0.3)
+            question_response = model.generate_content(question_prompt)
 
-            question = question_response.generations[0][0].text.strip()
+            if question_response and hasattr(question_response, "candidates") and question_response.candidates:
+                question = question_response.candidates[0].content.parts[0].text.strip()
 
-            if question not in unique_questions:
-                unique_questions.add(question)
+                if question and question not in unique_questions:
+                    unique_questions.add(question)
 
-                answer_prompt = f"Provide a answer to the following question: {question} with 75 words"
-                answer_response = model.generate(prompts=[answer_prompt], max_length=50, temperature=0.3)
-                answer = answer_response.generations[0][0].text.strip()
+                    # Generate an answer
+                    answer_prompt = f"Provide an answer to the following question: {question} with 75 words"
+                    answer_response = model.generate_content(answer_prompt)
 
-                qa_pairs.append((question, answer))
+                    if answer_response and hasattr(answer_response, "candidates") and answer_response.candidates:
+                        answer = answer_response.candidates[0].content.parts[0].text.strip()
+                        
+                        if answer:
+                            qa_pairs.append((question, answer))
+
+                        # Stop generating if we reach total_question
+                        if len(qa_pairs) >= total_question:
+                            return qa_pairs
 
     return qa_pairs
-
-
 
 
 
@@ -133,7 +152,7 @@ def main():
             resume_keywords = extract_lines(me_dialogues)
             resume_keywords_list = list(resume_keywords.values())
 
-            model = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCMS4RbZb8T3n5RJDgPs6rbrik6aNk1chw")
+            model = GoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=google_api_key)
 
             qa_pairs = generate_interview_questions_and_answers(model, keywords)
             render_qa_pairs(qa_pairs)
