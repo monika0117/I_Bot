@@ -116,93 +116,6 @@ def extract_and_process_text(uploaded_text):
 
 
     
-#Database    
-def main():
-    if 'authenticated' not in st.session_state:
-        st.session_state.authenticated = False
-    if 'setprompt' not in st.session_state:
-        st.session_state.setprompt = True
-
-    if st.session_state.authenticated:
-        run_streamlit_app()
-    else:
-        authenticate_and_register()
-
-
-def authenticate_and_register():
-    with open("style.css") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    image = Image.open("./logo/mainlogo.png")
-    resized_image = image.resize((640, 360))
-    col1, col2, col3 = st.columns([1, 2, 1])
-    st.markdown(
-            """
-            <style>
-            div.block-container {
-                margin-top: -80px;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-    )
-
-    # Layout to center the image
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        st.image(resized_image)
-
-    
-    if 'choice' not in st.session_state:
-        st.session_state.choice = None
-
-    with st.sidebar:
-        st.sidebar.header("Authentication")
-        if st.sidebar.button("Login"):
-            st.session_state.choice = "Login"
-        if st.sidebar.button("Signup"):
-            st.session_state.choice = "Register"
-
-    if st.session_state.choice == "Login":
-        st.header("Login Page")
-        username = st.text_input("Username:")
-        password = st.text_input("Password:", type="password")
-        with open("style.css") as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-        login_button = st.button("Done", key="login_button")
-
-        if login_button:
-                # Disable the button after click to prevent double clicks
-                st.session_state.login_button_disabled = True
-                
-                # Authenticate the user
-                user = authenticate_user(username, password)
-                if user:
-                    st.success("Login Successful! Redirecting...")
-                    st.session_state.authenticated = True
-                    st.session_state.username = username  # Store username in session state
-                    # Set query params to indicate the user is logged in
-                    st.query_params = {"logged_in": "true"}
-                    st.rerun()  # Trigger rerun to show logged-in state
-                else:
-                    st.error("Invalid username or password. Please try again.")
-
-           
-
-
-    elif st.session_state.choice == "Register":
-        st.header("Register Page")
-        new_username = st.text_input("New Username:")
-        new_password = st.text_input("New Password:", type="password")
-        
-        with open("style.css") as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-        if st.button("Done"):
-            if register_user(new_username, new_password):
-                st.success("Registration Successful!")
-                st.write(f"Welcome, {new_username}!")
-                st.session_state.authenticated = True
-                st.session_state.setprompt = True
 
 
 
@@ -215,32 +128,43 @@ def run_streamlit_app():
     layout="centered",  
     initial_sidebar_state="auto",  
     )
+    
     with open("style.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     image = Image.open("./logo/mainlogo.png")
     resized_image = image.resize((640, 360))
     col1, col2, col3 = st.columns([1, 2, 1])
+
    
 
     # Layout to center the image
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image(resized_image)
+        st.image(resized_image)    
+        st.header("Self Introduction")
+
+
+
 
     with st.sidebar:
-        if 'authenticated' in st.session_state and st.session_state.authenticated:
-                    current_user = st.session_state.get('username', 'Guest')
-                    st.title(f"Welcome, {current_user}!") 
+        if "authenticated" in st.session_state and st.session_state.authenticated:
+            current_user = st.session_state.get("username", "Guest")
+            st.title(f"Welcome, {current_user}!")
         else:
-                    st.title("Welcome to the App!")
+            st.title("Welcome to the App!")
+
         if st.button("Logout"):
-            st.session_state.authenticated = False
-            st.session_state.choice = None
             st.success(f"{st.session_state.get('username', 'Guest')} has been logged out.")
+
             # Clear all session state variables
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
-            st.query_params = {"param_name": "value"}
+
+            # Reset query parameters
+            st.experimental_set_query_params()  # Clears all query parameters
+
+            # Rerun the app to apply changes
+            st.rerun()
     
     def generate_audio(text):
         try:
@@ -315,6 +239,7 @@ def run_streamlit_app():
                 background_color = "#fff"
                 st.markdown(f"<div style='color:{answer_color}; background-color: {background_color}; padding: 10px;border-radius:10px;margin-bottom: 20px;'>{result}</div>",unsafe_allow_html=True,)
         with st._bottom:
+
             st.markdown("-----")
             c1, c2, c3 = st.columns(3)
 
@@ -348,5 +273,5 @@ def run_streamlit_app():
     
 
 if __name__ == "__main__":    
-    main()
+    run_streamlit_app()
     

@@ -3,6 +3,11 @@ import json
 import re
 import streamlit as st
 import os
+import threading
+import subprocess
+import sys
+import re
+import json
 from dotenv import load_dotenv
 import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAI
@@ -69,7 +74,7 @@ def generate_interview_questions_and_answers(model, keywords, total_questions=20
         for _ in range(num_questions):
             question_prompt = f"{keyword}"
             # Generate a question to redue the que length decrease max length
-            question_response = model.generate(prompts=[question_prompt], max_length=50, temperature=0.3)
+            question_response = model.generate(prompts=[question_prompt], max_length=10, temperature=0.3)
 
             question = question_response.generations[0][0].text.removeprefix("**Question:**").strip()
 
@@ -133,6 +138,7 @@ def generate_interview_resume(keywords, total_question):
 
 
 def main():
+
     
     with open("style_2.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)    
